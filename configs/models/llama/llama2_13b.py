@@ -9,8 +9,7 @@ from opencompass.models import Llama2
 # cd llama
 # pip install -e .
 
-models = [
-    dict(
+models = [dict(
         abbr="llama-2-13b",
         type=Llama2,
         path="./models/llama2/llama/llama-2-13b/",
@@ -19,5 +18,4 @@ models = [
         max_seq_len=2048,
         batch_size=16,
         run_cfg=dict(num_gpus=2, num_procs=2),
-    ),
-]
+    ),]

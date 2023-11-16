@@ -1,8 +1,6 @@
 from opencompass.models import HuggingFaceCausalLM
 
-
-models = [
-    dict(
+models = [dict(
         type=HuggingFaceCausalLM,
         abbr='llama-2-13b-hf',
         path="meta-llama/Llama-2-13b-hf",
@@ -17,5 +15,4 @@ models = [
         model_kwargs=dict(device_map='auto'),
         batch_padding=False, # if false, inference with for-loop without batch padding
         run_cfg=dict(num_gpus=2, num_procs=1),
-    )
-]
+    ),]
